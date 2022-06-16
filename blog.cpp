@@ -3,11 +3,44 @@
 #include <string>
 using namespace std;
 
+
+enum Weather {SUNNY = 0, CLOUD = 10, RAIN = 20, SNOW = 30};
+
 int main()
-{    
-    int array[] = {1,2,3,4,5};
-    // 배열의 이름으로 포인터 연산을 통해 배열 요소에 접근
-    for (int i=0; i<5; i++){
-        cout << i+1 << " 번째 배열 요소의 주소값은 " << *(array + i) << " 입니다." << endl;
+{   
+    int input;
+    Weather today_weather;
+
+    cout << "오늘의 날씨를 입력해주세요 : " << endl;
+    cout << "(SUNNY = 0, CLOUD = 10, RAIN = 20, SNOW = 30)0" << endl;
+    cin >> input;
+    today_weather = (Weather)input;
+
+    switch (today_weather)
+    {
+    case SUNNY :
+        cout << "오늘의 날씨는 끝내줘요!";
+        break;
+
+    case CLOUD :
+        cout << "오늘의 날씨는 선선해요!";
+        break;
+
+    case RAIN :
+        cout << "오늘의 날씨는 운치있어요!";
+        break;
+
+    case SNOW :
+        cout << "오늘의 날씨는 신나요!";
+        break;
+
+    default:
+        cout << "정확한 상숫값을 입력해주세요.";
+        break;
     }
+
+    cout << endl << "열거체 Weather의 각 상숫값은 " << SUNNY << ", " << CLOUD << ", "
+        << RAIN << ", " << SNOW << "입니다.";
+
+    return 0;
 } 
