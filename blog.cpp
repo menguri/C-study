@@ -2,11 +2,17 @@
 #include <string.h>
 #include <string>
 using namespace std;
-#define Add(X, Y)(X*Y)
 
-// main() 함수 본문
+namespace tennis
+{
+	string player;
+    int height;
+}
+using tennis::height;
+
 int main()
-{   
-    int a = 30, b = 40;
-    cout << "Add's result : " << Add(a, b) << endl; 
-} 
+{
+	height = 100;
+    cout << "네임스페이스를 통해 변수를 선언하고 호출합니다. : " << height << endl;
+	return 0;
+}
