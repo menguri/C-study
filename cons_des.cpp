@@ -39,7 +39,6 @@ int main(void)
     phone sansung=phone("삼성", 133);
     cout << "sansung's varibles : (name_, height_, id_password_)\n" << sansung.name_ << "\n" << sansung.height_ << "\n" <<  sansung.id_password_ << endl << endl;
 
-
     printf("[디폴트 생성자]\n");
     printf("* 객체 생성 시, 초깃값 명시하지 않으면 컴파일러에 의해 자동적으로 제공.\n");
     printf("* 클래스에서 생성자가 단 하나도 정의되지 않았을 때만 자동으로 제공한다.\n");
